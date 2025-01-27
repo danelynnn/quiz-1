@@ -1,6 +1,8 @@
 from tic_tac_toe import Game, toString
 
-game = Game(4)
+size = int(input("how big??? "))
+
+game = Game(size)
 game.draw()
 
 while game.state == 0:

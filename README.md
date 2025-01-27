@@ -1,9 +1,17 @@
 # Tic-Tac-Toe Perfected
 
-This is an enterprise ready implementation of tic tac toe, by Allie. The game can be run simply as follows:
+This is an enterprise ready implementation of tic tac toe, by Allie. The game can be run simply as follows, and will immediately intrusively prompt the user for their size:
 
 ```
 > python main.py
+
+how big???
+```
+
+After answering, the game will commence.
+
+```
+how big??? 4
 
    |   |   |
 ---+---+---+---
