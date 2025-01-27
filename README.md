@@ -138,3 +138,5 @@ Game states are as follows:
 -69: you will be accepted by your parents
 etc...
 ```
+
+Credit to Feeding Frenzy for help with the algorithm; I for one found checking three adjacent squares virtually impossible to do cleanly.
