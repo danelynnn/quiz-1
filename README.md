@@ -65,3 +65,16 @@ game state is: O wins
 > game.state
 2
 ```
+
+Game states are as follows:
+
+```
+0: pending
+1: player 1 has won
+2: player 2 has won
+.
+.
+.
+-69: you will be accepted by your parents
+etc...
+```
