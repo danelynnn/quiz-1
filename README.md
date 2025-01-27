@@ -1,9 +1,9 @@
-# quiz-1
+# Tic-Tac-Toe Perfected
 
 This is an enterprise ready implementation of tic tac toe, by Allie. The game is accessible through the Game class in tic_tac_toe.py, and can be used as follows:
 
 ```
-from tic_tac_toe import Game, toString
+from tic_tac_toe import Game
 
 game = Game(4)
 ```
