@@ -83,7 +83,7 @@ The game logic is accessible through the Game class in tic_tac_toe.py, and can b
 ```
 from tic_tac_toe import Game
 
-game ===================================================== Game(4)
+game = Game(4)
 ```
 
 The class has included functions for displaying the board, along with state, as follows:
