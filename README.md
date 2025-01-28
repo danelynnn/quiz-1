@@ -64,7 +64,17 @@ O's turn, what's yer move [input format: 'x, y']: 3 1
 ===============
 game state is: O wins
 ===============
+
+do you want to play agane?
 ```
+
+The game will then give the user the choice to replay the game. Of course, this is only the illusion of choice, as the only true answer is to continue.
+
+```
+do you want to play agane? yes
+```
+
+Histories of past games can be viewed in `logbook.txt`.
 
 ## Documentation
 

@@ -1,20 +1,46 @@
 from tic_tac_toe import Game, toString
+from datetime import datetime
 
-size = int(input("how big??? "))
+game_count = 0
 
-game = Game(size)
-game.draw()
+with open("logbook.txt", "a") as file:
+    file.write("======================================\n")
 
-while game.state == 0:
-    move = input(
-        f"{toString(game.turn)}'s turn, what's yer move [input format: 'x y']: "
-    )
-    x, y = move.split(" ")
-    x, y = int(x), int(y)
+    choice = True
+    while choice:
+        game_count += 1
+        size = int(input("how big??? "))
 
-    if game.board[y][x] > 0:
-        print("yoouuu can't do that")
-        continue
+        game = Game(size)
+        game.draw()
 
-    game.move(x, y)
-    game.draw()
+        while game.state == 0:
+            move = input(
+                f"{toString(game.turn)}'s turn, what's yer move [input format: 'x y']: "
+            )
+            x, y = move.split(" ")
+            x, y = int(x), int(y)
+
+            if game.board[y][x] > 0:
+                print("yoouuu can't do that")
+                continue
+
+            game.move(x, y)
+            game.draw()
+
+        file.write("-----------------------------------\n")
+        file.write(datetime.now().strftime("%B %d, %Y %H:%M:%S"))
+        file.write("\n")
+        file.write(f"Game of size {size} played\n")
+        file.write(f"Winner was {toString(game.state)}\n")
+        file.write("-----------------------------------\n")
+
+        choice = input("do you want to play agane? ") in [
+            "yes",
+            "sure",
+            "uhuh",
+            "fuck it why not",
+        ]
+
+    file.write(f'{game_count} game{("s" if game_count > 1 else "")} played\n')
+    file.write("======================================\n")

@@ -95,12 +95,12 @@ class Game:
                 print("".join(separator_str))
 
         print()
-        print("=" * (len("".join(line))))
+        print("=" * 69)
         status = "pending"
         if self.state == 1:
             status = "X wins"
         elif self.state == 2:
             status = "O wins"
         print(f"game state is: {status}")
-        print("=" * (len("".join(line))))
+        print("=" * 69)
         print()
