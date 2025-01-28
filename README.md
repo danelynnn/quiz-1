@@ -21,9 +21,9 @@ how big??? 4
 ---+---+---+---
    |   |   |
 
-===============
+=====================================================
 game state is: pending
-===============
+=====================================================
 
 X's turn, what's yer move [input format: 'x y']:
 ```
@@ -41,9 +41,9 @@ X's turn, what's yer move [input format: 'x y']: 3 1
 ---+---+---+---
    |   |   |
 
-===============
+=====================================================
 game state is: pending
-===============
+=====================================================
 
 O's turn, what's yer move [input format: 'x y']:
 ```
@@ -61,9 +61,9 @@ O's turn, what's yer move [input format: 'x, y']: 3 1
 ---+---+---+---
    |   |   |
 
-===============
+=====================================================
 game state is: O wins
-===============
+=====================================================
 
 do you want to play agane?
 ```
@@ -83,7 +83,7 @@ The game logic is accessible through the Game class in tic_tac_toe.py, and can b
 ```
 from tic_tac_toe import Game
 
-game = Game(4)
+game ===================================================== Game(4)
 ```
 
 The class has included functions for displaying the board, along with state, as follows:
@@ -99,9 +99,9 @@ The class has included functions for displaying the board, along with state, as 
 ---+---+---+---
    |   |   |
 
-===============
+=====================================================
 game state is: pending
-===============
+=====================================================
 ```
 
 Moves are made through the move function, where the class will perform state-of-the-art board analysis algorithms to detect a victory:
@@ -118,9 +118,9 @@ Moves are made through the move function, where the class will perform state-of-
 ---+---+---+---
    |   |   |
 
-===============
+=====================================================
 game state is: pending
-===============
+=====================================================
 ```
 
 State can be accessed through the state variable, because I couldn't be fucked to make an accessor (sprint 2, trust):
@@ -136,9 +136,9 @@ State can be accessed through the state variable, because I couldn't be fucked t
 ---+---+---+---
    |   |   |
 
-===============
+=====================================================
 game state is: O wins
-===============
+=====================================================
 
 > game.state
 2
