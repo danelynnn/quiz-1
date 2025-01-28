@@ -48,7 +48,7 @@ game state is: pending
 O's turn, what's yer move [input format: 'x y']:
 ```
 
-If a player has won, the program will terminate very abruptly and robotically, with the minimum required congratulations specified in the rubric:
+If a player has won, the game will end with the minimum required congratulations specified in the rubric:
 
 ```
 O's turn, what's yer move [input format: 'x, y']: 3 1
