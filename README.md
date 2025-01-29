@@ -123,7 +123,9 @@ game state is: pending
 =====================================================
 ```
 
-State can be accessed through the state variable, because I couldn't be fucked to make an accessor (sprint 2, trust):
+~~State can be accessed through the state variable, because I couldn't be fucked to make an accessor (sprint 2, trust):~~
+
+State can now be accessed through an accessor!
 
 ```
 > ...
@@ -140,8 +142,8 @@ State can be accessed through the state variable, because I couldn't be fucked t
 game state is: O wins
 =====================================================
 
-> game.state
-2
+> game.getState()
+O wins
 ```
 
 Game states are as follows:

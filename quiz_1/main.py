@@ -32,7 +32,7 @@ with open("logbook.txt", "a") as file:
         file.write(datetime.now().strftime("%B %d, %Y %H:%M:%S"))
         file.write("\n")
         file.write(f"Game of size {size} played\n")
-        file.write(f"Winner was {toString(game.state)}\n")
+        file.write(f"Winner was {game.getState()}\n")
         file.write("-----------------------------------\n")
 
         choice = input("do you want to play agane? ") in [

@@ -10,8 +10,6 @@ def toString(player):
         return "X"
     elif player == 2:
         return "O"
-    elif player == 3:
-        return "draw"
 
 
 def countDirection(board, x, y, xd, yd, player):
@@ -103,13 +101,16 @@ class Game:
 
         print()
         print("=" * 69)
-        status = "pending"
-        if self.state == 1:
-            status = "X wins"
-        elif self.state == 2:
-            status = "O wins"
-        elif self.state == 3:
-            status = "draw!"
-        print(f"game state is: {status}")
+        print(f"game state is: {self.getState()}")
         print("=" * 69)
         print()
+
+    def getState(self):
+        if self.state == 0:
+            return "pending"
+        elif self.state == 1:
+            return "X wins"
+        elif self.state == 2:
+            return "O wins"
+        elif self.state == 3:
+            return "draw!"
