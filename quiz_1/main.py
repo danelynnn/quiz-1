@@ -16,7 +16,7 @@ with open("logbook.txt", "a") as file:
 
         while game.state == 0:
             move = input(
-                f"{toString(game.turn)}'s turn, what's yer move [input format: 'x y']: "
+                f"{toString(game.next)}'s turn, what's yer move [input format: 'x y']: "
             )
             x, y = move.split(" ")
             x, y = int(x), int(y)
@@ -36,6 +36,7 @@ with open("logbook.txt", "a") as file:
         file.write("-----------------------------------\n")
 
         choice = input("do you want to play agane? ") in [
+            "y",
             "yes",
             "sure",
             "uhuh",

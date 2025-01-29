@@ -10,6 +10,8 @@ def toString(player):
         return "X"
     elif player == 2:
         return "O"
+    elif player == 3:
+        return "draw"
 
 
 def countDirection(board, x, y, xd, yd, player):
@@ -56,26 +58,31 @@ def countDirection(board, x, y, xd, yd, player):
 class Game:
     def __init__(self, size):
         self.board = [[0 for i in range(size)] for j in range(size)]
-        self.turn = 1
+        self.next = 1
+        self.turn = 0
         self.state = 0
 
     def move(self, x, y):
-        self.board[y][x] = self.turn
+        self.board[y][x] = self.next
 
         # check for a win
         # for each direction, count how many same marks
         # if ever reach 3, win
-        if countDirection(self.board, x, y, -1, 0, self.turn) == WIN:  # west
-            self.state = self.turn
-        elif countDirection(self.board, x, y, -1, -1, self.turn) == WIN:  # northwest
-            self.state = self.turn
-        elif countDirection(self.board, x, y, 0, -1, self.turn) == WIN:  # north
-            self.state = self.turn
-        elif countDirection(self.board, x, y, -1, 1, self.turn) == WIN:  # southwest
-            self.state = self.turn
+        if countDirection(self.board, x, y, -1, 0, self.next) == WIN:  # west
+            self.state = self.next
+        elif countDirection(self.board, x, y, -1, -1, self.next) == WIN:  # northwest
+            self.state = self.next
+        elif countDirection(self.board, x, y, 0, -1, self.next) == WIN:  # north
+            self.state = self.next
+        elif countDirection(self.board, x, y, -1, 1, self.next) == WIN:  # southwest
+            self.state = self.next
+
+        self.turn += 1
+        if self.state == 0 and self.turn == len(self.board) ** 2:
+            self.state = 3
 
         # switch players
-        self.turn = (self.turn % 2) + 1
+        self.next = (self.next % 2) + 1
 
     def draw(self):
         print()
@@ -101,6 +108,8 @@ class Game:
             status = "X wins"
         elif self.state == 2:
             status = "O wins"
+        elif self.state == 3:
+            status = "draw!"
         print(f"game state is: {status}")
         print("=" * 69)
         print()
